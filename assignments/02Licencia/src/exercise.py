@@ -1,22 +1,31 @@
 
 def main():
     #Escribe tu código debajo de esta línea
-    e = int(input ("DIngresa tu edad: " ))
+
+e = int(input ("DIngresa tu edad: " ))
 
 
 if e>=19:
     print("¿Tienes identificación oficial? (s/n): ")
     i = str(input())
+    
 
 else:
     print("No cumples requisitos")
+    print("¿Tienes identificación oficial? (s/n): ")
+    i = str(input())
 
 
-if (i == 'n') or (i == 's'):
+if (i == 's') and (e >= 19):
     print("Trámite de licencia concedido")
 
+elif (i == 'n') or (e < 18):
+    print("No cumples requisitos")
+
 else:
-    print("TNo cumples requisitos")
+    print('Respuesta incorrecta')
+
+
     pass
 
 
